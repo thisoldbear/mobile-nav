@@ -1,0 +1,15 @@
+.videos {
+  padding: 20px 10px;
+}
+
+.videos__title {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.videos__count {
+  color: #d81226;
+  margin-bottom: 10px;
+}

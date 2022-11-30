@@ -1,0 +1,177 @@
+.navbar {
+  background-color: #000;
+  z-index: 1;
+}
+
+.navbar__brand {
+  width: 120px;
+  height: auto;
+  padding: 16px;
+}
+
+.navbar__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d81226;
+}
+
+.navbar__toggle-button {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-left: 5px;
+}
+
+.navbar__toggle-icon {
+  width: 22px;
+  height: 18px;
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.navbar__toggle-icon span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.navbar__toggle-icon span:nth-child(1) {
+  top: 0;
+}
+
+.navbar__toggle-icon span:nth-child(2),.navbar__toggle-icon span:nth-child(3) {
+  top: 8px;
+}
+
+.navbar__toggle-icon span:nth-child(4) {
+  top: 16px;
+}
+
+.navbar--is-active .navbar__toggle-icon span:nth-child(1) {
+  top: 8px;
+  width: 0%;
+  left: 50%;
+}
+
+.navbar--is-active .navbar__toggle-icon span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.navbar--is-active .navbar__toggle-icon span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.navbar--is-active .navbar__toggle-icon span:nth-child(4) {
+  top: 7px;
+  width: 0%;
+  left: 50%;
+}
+
+.navbar__social {
+  height: 40px;
+  width: auto;
+  margin-left: auto;
+}
+
+.navbar__search-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  padding: 0;
+  background-color: #404040;
+}
+
+.navbar__search-icon {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+
+.navbar__menu {
+  display: none;
+  position: absolute;
+  height: calc(100vh - 90px);
+  background: #000;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.navbar__menu::before {
+  display: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #d81226;
+  z-index: 1;
+}
+
+.navbar--is-active .navbar__menu::before {
+  display: block;
+}
+
+.navbar--is-active .navbar__menu {
+  display: block;
+}
+
+/**
+ * Search
+ */
+
+.search-bar {
+  display: none;
+  position: relative;
+  width: 100%;
+  padding: 10px 10px;
+  background-color: #e6e6e6;
+  z-index: 1;
+}
+
+.search-bar::before {
+  display: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #404040;
+  z-index: 1;
+}
+
+.search-bar--active {
+  display: block;
+  position: absolute;
+}
+
+.search-bar--active::before {
+  display: block;
+}
+
+.search-bar__input {
+  padding: 10px;
+  width: 100%;
+  border: 0;
+}
